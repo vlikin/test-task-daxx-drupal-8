@@ -1,0 +1,12 @@
+uuid: 7fac0d03-d464-41ec-85e2-208ac06a4d3a
+langcode: en
+status: true
+dependencies: {  }
+id: portfolio
+label: Portfolio
+description: 'Portfolio page'
+use_admin_theme: false
+path: /portfolio
+access_logic: and
+access_conditions: {  }
+parameters: {  }

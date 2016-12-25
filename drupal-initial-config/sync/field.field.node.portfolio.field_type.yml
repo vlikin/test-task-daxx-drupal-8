@@ -1,0 +1,21 @@
+uuid: 5944f4fe-8d58-477a-be22-68c4f2b32614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.portfolio
+  module:
+    - options
+id: node.portfolio.field_type
+field_name: field_type
+entity_type: node
+bundle: portfolio
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

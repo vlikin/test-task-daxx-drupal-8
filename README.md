@@ -15,6 +15,12 @@ git subtree pull --prefix drupal dorg-drupal 8.3.x
 ```
 **Note that the subtree must be added before the command.** Look at the way how it was added.
 
+## How to update initial config from the existed project. 
+```
+docker-compose exec --user 82 php drush config-export
+cp -R drupal/sites/default/files/config_F82RMqlbB3TxlLF2NAhJz5K-Tb-Y2m4mEcSZCMLpHj41sjHXHvTOZYGHgA5hssBYylifb6EnWw/sync drupal-initial-config
+```
+
 ## The way how Drupal 8 core was merged to the project. 
 ```
 git add remote dorg-drupal https://git.drupal.org/project/drupal.git
