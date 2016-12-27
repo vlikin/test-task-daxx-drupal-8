@@ -1,0 +1,20 @@
+name: features_master
+description: 'This is the master module that contains the configuration.'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - field
+  - image
+  - menu_ui
+  - node
+  - options
+  - page_manager
+  - panelizer
+  - panels
+  - path
+  - text
+  - user
+  - views
+  - responsive_image
+version: 8.x-1.0

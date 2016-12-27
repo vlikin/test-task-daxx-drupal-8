@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: portfolio
+label: Portfolio
+description: 'Portfolio page'
+use_admin_theme: false
+path: /portfolio
+access_logic: and
+access_conditions: {  }
+parameters: {  }

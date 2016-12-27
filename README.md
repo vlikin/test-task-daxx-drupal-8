@@ -15,6 +15,11 @@ git subtree pull --prefix drupal dorg-drupal 8.3.x
 ```
 **Note that the subtree must be added before the command.** Look at the way how it was added.
 
+## How to import predefined configuration.
+```
+docker-compose exec --user 82 php drush config-import --partial --source=/drupal-initial-config/sync-short
+```
+
 ## How to update initial config from the existed project. 
 ```
 docker-compose exec --user 82 php drush config-export

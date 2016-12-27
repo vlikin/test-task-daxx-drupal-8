@@ -1,0 +1,17 @@
+uuid: 72b24e9f-0d9b-4da1-a20b-8b7329f3a34a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Portfolio
+type: portfolio
+description: 'It describe the made work.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
