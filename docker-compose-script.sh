@@ -12,5 +12,7 @@ docker-compose exec --user 82 php drush site-install\
     --account-pass=admin\
     --account-mail=admin@eaxample.com\
     -y
+
+# Apply project functionality.
 # docker-compose exec --user 82 php drush config-import --partialy --source=/drupal-initial-config/sync-short -y
-# docker-compose exec --user 82 php drush en features_master -y
+docker-compose exec --user 82 php drush en features_master -y
