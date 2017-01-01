@@ -1,17 +1,54 @@
-## How to set up the project step by step.
+# How to set up the project step by step.
+## Requirements.
+* Installed docker, docker-compose, web-browser.
+* Tested on Mac, Linux.
+## Process.
 * Сlone the repository.
 ```
 git clone https://github.com/vlikin/test-task-daxx-drupal-8.git
 ```
 * Check that `master` branch is selected.
-* Up docker containers
+* Run install script.
 ```
-docker-compose up -d
+sh ./docker-compose-script.sh
 ```
+It ups containers, installs fresh Drupal site, applies project configuration,
+runs tests, imports initial content.
+* Open a web browser.
+* Navigate to http://localhost:8000
+* The project will be opened.
+* Test it.beer
 
+# Skills that are shown at the project.
+* Docker Virtualizaion
+* PHP, Nginx, MariaDB technology stack.
+* Drupal 8.
+* Git core.
+* Out of the box project.
+* Migration process.
+* Blocks, Layouts, Custom blocks.
+* Page manager, Panels, Panalizer.
+* Views, contextual filters.
+* FAPI, Ajax forms.
+* Responsive image.
+
+
+
+# Tips
+## How to ...
+## look at the migration status.
+ 
 ## How to update Drupal 8 core.
 ```
 git subtree pull --prefix drupal dorg-drupal 8.3.x
+```
+## How to run a migration.
+```
+docker-compose exec --user 82 php ./drush migrate-import portfolio
+```
+## How to revert configurations.
+```
+docker-compose exec --user 82 php drush features-import features_master 
 ```
 **Note that the subtree must be added before the command.** Look at the way how it was added.
 
