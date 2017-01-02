@@ -18,4 +18,10 @@ dependencies:
   - user
   - views
   - responsive_image
+  - migrate
+  - migrate_plus
+  - migrate_tools
+  - devel_generate
+config_devel:
+  - migrate_plus.migration.portfolio
 version: 8.x-1.0
