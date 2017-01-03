@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - import_drupal
+id: images
+migration_tags: null
+migration_group: 'Drupal Import'
+label: 'Import images from Drupal'
+source:
+  constants:
+    destination_base_path: 'public://2017-01'
+    source_base_path_images: modules/custom/features_master/migrate_data/portfolio/pictures
+    is_public: true
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: modules/custom/features_master/migrate_data/portfolio/files.json
+  ids:
+    _fid:
+      type: string
+  item_selector: included/
+  fields:
+    -
+      name: _fid
+      label: _fid
+      selector: /_fid
+    -
+      name: filename
+      label: filename
+      selector: /filename
+process:
+  filename: filename
+  filemime: image/jpeg
+  uid:
+    plugin: default_value
+    default_value: 1
+  destination_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/destination_base_path
+        - filename
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path_images
+        - filename
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@destination_full_path'
+destination:
+  plugin: 'entity:file'
+migration_dependencies: {  }

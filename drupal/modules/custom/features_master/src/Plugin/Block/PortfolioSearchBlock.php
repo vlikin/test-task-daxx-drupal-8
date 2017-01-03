@@ -9,9 +9,9 @@ use Drupal\Core\Block\BlockBase;
  * Provides Custom Block.
  *
  * @Block(
- * id = "my_custom_block",
- * admin_label = @Translation("Custom Block"),
- * category = @Translation("Blocks")
+ * id = "portfolio_search_box",
+ * admin_label = @Translation("Search Box"),
+ * category = @Translation("Portfolio")
  * )
  */
 class PortfolioSearchBlock extends BlockBase {
@@ -22,7 +22,6 @@ class PortfolioSearchBlock extends BlockBase {
   public function build() {
     $build = array();
 
-    $build['#markup'] = '' . t('My Custom Form') . '';
     $build['form'] = \Drupal::formBuilder()->getForm('Drupal\features_master\Form\PortfolioSearchForm');
 
     return $build;

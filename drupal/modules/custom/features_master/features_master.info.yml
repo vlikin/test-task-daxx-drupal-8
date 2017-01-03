@@ -4,9 +4,16 @@ type: module
 core: 8.x
 dependencies:
   - datetime
+  - devel_generate
+  - features
+  - features_master
+  - features_ui
   - field
   - image
   - menu_ui
+  - migrate
+  - migrate_plus
+  - migrate_tools
   - node
   - options
   - page_manager
@@ -14,14 +21,8 @@ dependencies:
   - panelizer
   - panels
   - path
+  - responsive_image
   - text
   - user
   - views
-  - responsive_image
-  - migrate
-  - migrate_plus
-  - migrate_tools
-  - devel_generate
-config_devel:
-  - migrate_plus.migration.portfolio
 version: 8.x-1.0
