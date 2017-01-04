@@ -83,9 +83,9 @@ third_party_settings:
             label_display: '0'
             formatter:
               label: above
-              type: image
+              type: responsive_image
               settings:
-                image_style: large
+                responsive_image_style: narrow
                 image_link: ''
               third_party_settings: {  }
               weight: 0
@@ -139,7 +139,7 @@ third_party_settings:
         layout_settings: {  }
         page_title: ''
         storage_type: panelizer_default
-        storage_id: 'node:portfolio:full:default'
+        storage_id: 'node:portfolio:default:default'
         builder: ipe
         pattern: panelizer
         static_context: {  }

@@ -17,10 +17,132 @@ dependencies:
     - user
 third_party_settings:
   panelizer:
-    enable: false
-    custom: false
-    allow: false
+    enable: true
+    custom: true
+    allow: true
     default: default
+    displays:
+      default:
+        blocks:
+          6609298d-b983-4ab2-993d-8bb3c11d1a35:
+            id: 'entity_field:node:uid'
+            label: 'Authored by'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: author
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: middle
+            weight: 0
+            uuid: 6609298d-b983-4ab2-993d-8bb3c11d1a35
+          97b5a181-e244-41c5-80be-cab6a27b77b7:
+            id: 'entity_field:node:created'
+            label: 'Authored on'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: timestamp
+              settings:
+                date_format: medium
+                custom_date_format: ''
+                timezone: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: middle
+            weight: 0
+            uuid: 97b5a181-e244-41c5-80be-cab6a27b77b7
+          4819dda6-4c41-4240-b19e-44f8ebba9b0f:
+            id: 'entity_field:node:body'
+            label: 'Explanation of the project'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_trimmed
+              settings:
+                trim_length: 200
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: middle
+            weight: 1
+            uuid: 4819dda6-4c41-4240-b19e-44f8ebba9b0f
+          86057c6b-567f-499a-822a-4c795ff09a55:
+            id: 'entity_field:node:field_image'
+            label: 'Sample screenshot'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: responsive_image
+              settings:
+                responsive_image_style: wide
+                image_link: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: middle
+            weight: 2
+            uuid: 86057c6b-567f-499a-822a-4c795ff09a55
+          016eb7b2-86f1-4563-9cf4-c457ee7ece6f:
+            id: 'entity_field:node:field_type'
+            label: Type
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: list_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: middle
+            weight: 4
+            uuid: 016eb7b2-86f1-4563-9cf4-c457ee7ece6f
+          701d8b48-6a6f-4566-91d2-89f4fdae88a8:
+            id: 'entity_field:node:field_year'
+            label: Year
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: list_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: middle
+            weight: 3
+            uuid: 701d8b48-6a6f-4566-91d2-89f4fdae88a8
+        id: panels_variant
+        label: Default
+        uuid: 576982f1-c225-4212-8c7e-ceeeef69efad
+        weight: 0
+        layout: onecol
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: ''
+        storage_id: ''
+        builder: ipe
+        pattern: panelizer
 id: node.portfolio.teaser
 targetEntityType: node
 bundle: portfolio
