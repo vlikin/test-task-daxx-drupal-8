@@ -13,7 +13,7 @@ git subtree pull --prefix drupal dorg-drupal 8.3.x
 ```
 ## run a migration.
 ```
-docker-compose exec --user 82 php ./drush migrate-import portfolio
+docker-compose exec --user 82 php drush migrate-import portfolio
 ```
 ## revert configurations.
 ```

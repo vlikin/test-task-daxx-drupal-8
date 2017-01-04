@@ -1,9 +1,6 @@
-langcode: en
-status: true
-dependencies: {  }
-id: portfolio
+id: portfolio_portfolio
 migration_tags: null
-migration_group: 'Drupal Import'
+migration_group: 'Portfolio'
 label: 'Import articles from Drupal'
 source:
   plugin: url
@@ -49,7 +46,7 @@ process:
   body/value: body
   field_image:
     plugin: migration
-    migration: images
+    migration: portfolio_images
     source: field_image
   uid:
     plugin: default_value
@@ -58,4 +55,4 @@ destination:
   plugin: 'entity:node'
 migration_dependencies:
   require:
-    - images
+    - portfolio_images

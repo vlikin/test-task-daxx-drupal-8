@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 __DIR__=$(pwd)
-docker-compose up -d
+#docker-compose up -d
 docker-compose exec --user 82 php chmod u+w sites/default
 docker-compose exec --user 82 php chmod u+w sites/default/settings.php
 docker-compose exec --user 82 php rm -fR sites/default/settings.php sites/default/files
@@ -22,8 +22,8 @@ docker-compose exec --user 82 php drush en features_master -y
 docker-compose exec --user 82 php drush config-set "system.site" page.front /portfolio -y
 
 # Imports initial content.
-docker-compose exec --user 82 php ./drush migrate-import portfolio_images
-docker-compose exec --user 82 php ./drush migrate-import portfolio_portfolio
+docker-compose exec --user 82 php drush migrate-import portfolio_images
+docker-compose exec --user 82 php drush migrate-import portfolio_portfolio
 
 # Generates content.
-docker-compose exec --user 82 php ./drush generate-content 5 --types=portfolio
+#docker-compose exec --user 82 php drush generate-content 5 --types=portfolio

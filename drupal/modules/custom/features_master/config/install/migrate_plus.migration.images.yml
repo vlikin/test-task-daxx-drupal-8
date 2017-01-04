@@ -1,19 +1,16 @@
-langcode: en
-status: true
-dependencies: {  }
-id: images
+id: portfolio_images
 migration_tags: null
-migration_group: 'Drupal Import'
+migration_group: 'Portfolio'
 label: 'Import images from Drupal'
 source:
   constants:
-    destination_base_path: 'public://2017-01'
-    source_base_path_images: modules/custom/features_master/migrate_data/portfolio/pictures
+    destination_base_path: 'public://portfolio'
+    source_base_path_images: modules/custom/features_master/migrate_data/portfolio/images
     is_public: true
   plugin: url
   data_fetcher_plugin: file
   data_parser_plugin: json
-  urls: modules/custom/features_master/migrate_data/portfolio/files.json
+  urls: modules/custom/features_master/migrate_data/portfolio/images.json
   ids:
     _fid:
       type: string
@@ -54,4 +51,3 @@ process:
       - '@destination_full_path'
 destination:
   plugin: 'entity:file'
-migration_dependencies: {  }

@@ -12,7 +12,13 @@
 ```
 git clone https://github.com/vlikin/test-task-daxx-drupal-8.git
 ```
+* Move to the project.
 * Check that `master` branch is selected.
+* Up containers
+```
+docker-compose up -d
+```
+* Wait 2 minutes.
 * Run install script.
 ```
 sh ./docker-compose-script.sh
@@ -23,6 +29,12 @@ runs tests, imports initial content.
 * Navigate to http://localhost:8000
 * The project will be opened.
 * Test it.
+ * Select a type.
+ * Year will be loaded.
+ * Select a year.
+ * Push the button `Submit`
+ * The view is filtered according to filters.
+ * Check that responsive images are used.
 * Follow on /user
 * Login as `admin` and password `admin`.
 * Look from inside.
