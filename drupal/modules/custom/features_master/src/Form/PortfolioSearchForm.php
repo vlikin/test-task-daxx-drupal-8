@@ -27,13 +27,13 @@ class PortfolioSearchForm extends FormBase {
         $form_state->set($key, $value);
       }
     }
-    $types = ['', 'Development', 'Content', 'Design'];
+    $types = ['all', 'Development', 'Content', 'Design'];
     $form['type'] = array(
       '#type' => 'select',
       '#title' => $this->t('Type'),
       '#options' => array_combine($types, $types),
-      '#required' => TRUE,
-      '#default_value' => $form_state->get('type'),
+      '#required' => FALSE,
+      '#default_value' => $form_state->get('type') ? $form_state->get('type') : 'all',
       '#ajax' => [
         'callback' => '::setYearFilterCallback',
         'wrapper' => 'year-wrapper',
@@ -78,7 +78,7 @@ class PortfolioSearchForm extends FormBase {
       $query->condition('_type.field_type_value', $typeFilter);
     }
     $years = $query->execute()->fetchCol('_year');
-    array_unshift($years, '');
+    array_unshift($years, 'all');
     return $years;
   }
 
@@ -89,13 +89,13 @@ class PortfolioSearchForm extends FormBase {
    * @param string $default_value
    * @return array
    */
-  public function getYearControl($typeFilter=FALSE, $default_value='') {
+  public function getYearControl($typeFilter=FALSE, $default_value='all') {
     $years = $this->getYears($typeFilter);
     return array(
       '#type' => 'select',
       '#title' => $this->t('Year'),
       '#options' => array_combine($years, $years),
-      '#default_value' => $default_value
+      '#default_value' => empty($default_value) ? 'all' : $default_value
     );
   }
 
