@@ -1,9 +1,6 @@
 langcode: en
 status: true
-dependencies:
-  enforced:
-    module:
-      - import_drupal
+dependencies: {  }
 id: images
 migration_tags: null
 migration_group: 'Drupal Import'

@@ -1,0 +1,79 @@
+{
+  "included": [
+    {
+      "_fid": 1,
+      "filename": "1.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 2,
+      "filename": "2.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 3,
+      "filename": "3.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 4,
+      "filename": "4.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 5,
+      "filename": "5.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 6,
+      "filename": "6.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 7,
+      "filename": "7.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 8,
+      "filename": "8.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 9,
+      "filename": "9.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 10,
+      "filename": "10.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 11,
+      "filename": "11.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 12,
+      "filename": "12.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 13,
+      "filename": "13.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 14,
+      "filename": "14.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 15,
+      "filename": "15.jpg",
+      "mimetype": "image/jpeg"
+    }
+  ]
+}
