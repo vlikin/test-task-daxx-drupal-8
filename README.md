@@ -23,6 +23,9 @@ runs tests, imports initial content.
 * Navigate to http://localhost:8000
 * The project will be opened.
 * Test it.
+* Follow on /user
+* Login as `admin` and password `admin`.
+* Look from inside.
 
 # Skills that are shown at the project.
 * Docker Virtualizaion
