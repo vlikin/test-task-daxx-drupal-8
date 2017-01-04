@@ -19,11 +19,11 @@ docker-compose exec --user 82 php drush site-install\
 docker-compose exec --user 82 php drush en features_master -y
 
 # Sets front page.
-docker-compose exec --user 82 php drush config-set "system.site" page.front /portfolio
+docker-compose exec --user 82 php drush config-set "system.site" page.front /portfolio -y
 
 # Imports initial content.
-docker-compose exec --user 82 php ./drush migrate-import images
-docker-compose exec --user 82 php ./drush migrate-import portfolio
+docker-compose exec --user 82 php ./drush migrate-import portfolio_images
+docker-compose exec --user 82 php ./drush migrate-import portfolio_portfolio
 
 # Generates content.
 docker-compose exec --user 82 php ./drush generate-content 5 --types=portfolio
