@@ -1,0 +1,24 @@
+{
+  "included": [
+    {
+      "_fid": 1000,
+      "filename": "1000.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 1,
+      "filename": "1.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 2,
+      "filename": "2.jpg",
+      "mimetype": "image/jpeg"
+    },
+    {
+      "_fid": 3,
+      "filename": "3.jpg",
+      "mimetype": "image/jpeg"
+    }
+  ]
+}
